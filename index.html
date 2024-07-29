@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shoe Shop</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img src="assets/logo_white.png" alt="logo" class="logo-white" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <a href="shop_now.html">
+            <li><button class="btn">Shop Now</button></li>
+        </a>
+      </ul>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <a href="product1.html">
+        <img src="assets/im8.webp" alt="header"  />
+    </a>
+        <div class="header__image__content">
+          <h4>Price: $150</h4>
+          <button class="btn">Add to cart</button>
+        </div>
+      </div>
+      <div class="header__content">
+        <h1>Exclusive<br />Shoe Collection</h1>
+        <p>
+          Discover our latest collection of premium shoes, designed for both comfort and style.
+        </p>
+      </div>
+    </header>
+
+    <section class="product" id="product">
+        <div class="section__container product__container">
+          <div class="product__grid">
+            <div class="product__image">
+              <!-- Updated this part to include a link to product.html -->
+              <a href="product.html">
+                <img src="assets/im11.jpg" alt="product" id="main-product-image"/>
+              </a>
+            </div>
+            <div class="product__content">
+              <div class="product__card">
+                <h4>Quality Material</h4>
+                <p>Premium leather and breathable fabric</p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="product__card">
+                <h4>Comfort Fit</h4>
+                <p>Ergonomically designed for all-day wear</p>
+                <a href="#">Learn More</a>
+              </div>
+              <div class="product__card">
+                <div class="product__colors">
+                  
+                  <img src="assets/im17.webp" alt="color1" class="color-option" data-image="assets/im17.webp" />
+                  <img src="assets/im18.webp" alt="color2" class="color-option" data-image="assets/im18.webp" />
+                  <img src="assets/im11.jpg" alt="color3" class="color-option" data-image="assets/im11.webp" />
+                  <p>Available colors</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__btn">
+            <button class="btn">Add to cart</button>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+
+    <section class="section__container store__container" id="store">
+      <h2>Exclusive Shoe Models</h2>
+      <p>
+        Check out our latest models that blend style with unparalleled comfort.
+      </p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="store__card">
+              <h4>Model no- 001</h4>
+              <img src="assets/im11.jpg" alt="store" />
+              <h3>Price- $280</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="store__card">
+              <h4>Model no- 002</h4>
+              <img src="assets/im15.jpg" alt="store" />
+              <h3>Price- $190</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="store__card">
+              <h4>Model no- 003</h4>
+              <img src="assets/im16.webp" alt="store" />
+              <h3>Price- $170</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="store__card">
+              <h4>Model no- 004</h4>
+              <img src="assets/im13.jpg" alt="store" />
+              <h3>Price- $200</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="store__card">
+              <h4>Model no- 005</h4>
+              <img src="assets/im14.jpg" alt="store" />
+              <h3>Price- $160</h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="store__card">
+              <h4>Model no- 006</h4>
+              <img src="assets/im12.jpg" alt="store" />
+              <h3>Price- $210</h3>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <img src="assets/logo_black.png" alt="logo" />
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-pinterest-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024  SHA Shoe Shop. All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

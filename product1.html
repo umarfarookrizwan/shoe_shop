@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shoe Shop</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img src="assets/logo_white.png" alt="logo" class="logo-white" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <a href="shop_now.html">
+        <li><button class="btn">Shop Now</button></li>
+    </a>
+      </ul>
+    </nav>
+    </header>
+    <body>
+        <div class="product-page">
+            <div class="product-image">
+                <img src="assets/im8.webp" alt="Air Jordan 6 Retro 'Pearl'" id="main-product-image">
+            </div>
+            <div class="product-details">
+                <h1>Air Jordan 6 Retro 'Pearl'</h1>
+                <div class="price">
+                    <span class="current-price">Rs. 12,480.00</span>
+                    <span class="original-price">Rs. 19,854.00</span>
+                    <span class="discount">50% OFF</span>
+                </div>
+                <div class="stock-info">
+                    <span>25 People are viewing this right now</span>
+                </div>
+                <div class="color-options">
+                    <span>Color: White Green</span>
+                    <div class="color-choices">
+                        <img src="assets/im17.webp" alt="color1" class="color-option" data-image="assets/im17.webp" />
+                        <img src="assets/im18.webp" alt="color2" class="color-option" data-image="assets/im18.webp" />
+                        <img src="assets/im11.jpg" alt="color3" class="color-option" data-image="assets/im11.webp" />
+                    </div>
+                </div>
+                <div class="size-options">
+                    <label for="size">Shoe Size:</label>
+                    <select id="size">
+                        <option>US 10 / UK 9.5 / EU 44 Foot Length (27.5 cm / 275 mm)</option>
+                        <option>US 9.5 / UK 9 / EU 44 Foot Length (27 cm / 270 mm)</option>
+                        <option>US 8.5 / UK 8 / EU 44 Foot Length (26.5 cm / 265 mm)</option>
+                    </select>
+                </div>
+                <div class="quantity">
+                    <label for="quantity">Quantity</label>
+                    <div class="quantity-controls">
+                        <button>-</button>
+                        <input type="text" id="quantity" value="1">
+                        <button>+</button>
+                    </div>
+                </div>
+                <button class="add-to-cart">Add to cart - Rs. 12,480.00</button>
+                <div class="additional-actions">
+                    <a href="#">Compare color</a>
+                    <a href="#">Ask a question</a>
+                    <a href="#">Share</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Example JavaScript for quantity controls
+
+function close_btn(){
+
+    document.getElementById('close-cart-btn').addEventListener('click', () => {
+    document.getElementById('cart-sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('open');
+});
+
+}
+
+
+document.querySelectorAll('.quantity-controls button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const input = e.target.parentElement.querySelector('input');
+        let value = parseInt(input.value);
+        if (e.target.textContent === '+') {
+            value++;
+        } else {
+            value = value > 1 ? value - 1 : 1;
+        }
+        input.value = value;
+    });
+});
+
+document.querySelector('.add-to-cart').addEventListener('click', () => {
+    document.getElementById('cart-sidebar').classList.add('open');
+    document.getElementById('sidebar-overlay').classList.add('open');
+});
+
+document.getElementById('close-cart-btn').addEventListener('click', () => {
+    document.getElementById('cart-sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('open');
+});
+
+
+document.getElementById('sidebar-overlay').addEventListener('click', () => {
+    document.getElementById('cart-sidebar').classList.remove('open');
+    document.getElementById('sidebar-overlay').classList.remove('open');
+});
+
+
+        </script>
+
+
+<div class="sidebar" id="cart-sidebar">
+    <div class="sidebar-header">
+        <h2>Shopping Cart</h2>
+        <button class="close-btn" onclick="close_btn()" id="close-cart-btn">&times;</button>
+    </div>
+    <div class="sidebar-content">
+        <!-- Cart items will go here -->
+        <div class="cart-item">
+            <img src="assets/im11.jpg" alt="Renascence Metro Sneakers" class="cart-item-image">
+            <div class="cart-item-details">
+                <h3>Air Jordan 6 Retro 'Pearl'</h3>
+                <p>White Blue / US 5 / UK 4.5 / EU 36</p>
+                <div class="cart-item-quantity">
+                    <button class="quantity-decrease">-</button>
+                    <input type="text" value="1" class="quantity-input">
+                    <button class="quantity-increase">+</button>
+                </div>
+                <p class="cart-item-price">Rs. 12,462.00</p>
+                <button class="remove-item-btn">Remove</button>
+            </div>
+        </div>
+        <!-- More items... -->
+    </div>
+    <div class="sidebar-footer">
+        <p class="subtotal">Subtotal: Rs. 12,462.00</p>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+</div>
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+
+
+
+    </body>
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+          <img src="assets/logo_black.png" alt="logo" />
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-pinterest-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__bar">
+          Copyright © 2024  SHA Shoe Shop. All rights reserved
+        </div>
+      </footer>
+  
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="main.js"></script>
+    </body>
+  </html>
+  

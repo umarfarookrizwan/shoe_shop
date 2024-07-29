@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Shoe Shop - Branches</title>
+    <style>
+        /* Page title */
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+/* Branches section styles */
+.branches-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.branch {
+  background-color: #fdfafa;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.branch img {
+  width: 100%;
+  height: auto;
+}
+
+.branch-info {
+  padding: 20px;
+}
+
+.branch-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.branch-info p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* About section styles */
+.about-section {
+  background-color: #e8e8e8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Contact section styles */
+.contact-section {
+  background-color: #e8e8e8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #555;
+}
+.hover{
+  padding: 5px;
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img src="assets/logo_white.png" alt="logo" class="logo-white" />
+          </a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="store.html">Store</a></li>
+        <a href="shop_now.html">
+          <li><button class="btn">Shop Now</button></li>
+      </a>
+      </ul>
+    </nav>
+
+    <header>
+      <h1 class="page-title">Our Branches</h1>
+    </header>
+
+    <section class="branches-section">
+      <div class="branch">
+        <img src="assets/branch1.jpeg" alt="Branch 1" />
+        <div class="branch-info">
+          <h2>New York Branch</h2>
+          <p>123 Main Street, New York, NY 10001</p>
+        </div>
+      </div>
+      <div class="branch">
+        <img src="assets/branch2.jpeg" alt="Branch 2" />
+        <div class="branch-info">
+          <h2>Los Angeles Branch</h2>
+          <p>456 Elm Street, Los Angeles, CA 90001</p>
+        </div>
+      </div>
+      <div class="branch">
+        <img src="assets/branch3.jpeg" alt="Branch 3" />
+        <div class="branch-info">
+          <h2>Chicago Branch</h2>
+          <p>789 Oak Street, Chicago, IL 60601</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>About Us</h2>
+      <p>
+        SHA STORE is a lifestyle media brand inspired by a dedicated community of sneaker enthusiasts from all backgrounds.
+         United under one simple truth, "Giving value to your feet. Every soul has a story," we pay homage to the past; add our voices to today's
+          stories and entertain the future of footwear. A fresh pair of sneakers is a universal bond that connects us all, regardless of race,
+           gender or class. Just know that whatever you choose to lace up in today, and wherever your steps may take you SHA STORE Sees you.
+      </p>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Email: info@shashoeshop.com</p>
+      <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <img src="assets/logo_black.png" alt="logo" />
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-pinterest-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 SHA Shoe Shop. All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
